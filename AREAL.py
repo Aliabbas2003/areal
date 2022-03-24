@@ -1,3 +1,4 @@
+from cgi import print_arguments
 from inspect import Parameter
 import os
 import math
@@ -23,6 +24,8 @@ def skriv_meny():
 # Funksjonen skal returnere arealet
 # Utvikler 1 har ansvaret for å lage denne funksjonen
 
+def kvadrat(s):
+    return s*s
 
 
 # Funksjon for å beregne arealet av et rektangel skrives her. Funsjonen skal ta imot to parameter (g og h)
@@ -30,16 +33,23 @@ def skriv_meny():
 # Utvikler 1 har ansvaret for å lage denne funksjonen
 
 
+def rektangel(g,h):
+    return g*h
 
 # Funksjon for å beregne arealet av en trekant skrives her. Funsjonen skal ta imot to parameter (g og h)
 # Funksjonen skal returnere arealet
 # Utvikler 1 har ansvaret for å lage denne funksjonen
 
+def trekant(g,h):
+    return g*h/2
 
 # Funksjon for å beregne arealet av et parallellogram skrives her. Funsjonen skal ta imot to parameter (g og h)
 # Funksjonen skal returnere arealet
 # Utvikler 1 har ansvaret for å lage denne funksjonen
 
+
+def parallellogram(g,h):
+    return g*h
 # Funksjon for å beregne arealet av en rombe skrives her. Funsjonen skal ta imot to parameter (g og h)
 # Funksjonen skal returnere arealet
 # Utvikler 2 har ansvaret for å lage denne funksjonen
@@ -72,20 +82,24 @@ while ans != "8":
     ans=input("Hva ønsker du å gjøre. Velg tall? ") 
     if ans=="1":
         clear()
-        kvadrat=int("hva vil det vare?")
         print("\nHer bergnes arealet av et kvadrat")
+        print(f"Areal: {kvadrat(int(input('Oppgi side lengde: ')))}")
         venter=input("Trykk ENTER for å fortsette!")    
     elif ans=="2":
         clear()
         print("\nHer bergnes arealet av et rektangel")
+        print(f"Areal: {rektangel(int(input('Oppgi g: ')), int(input('Oppgi h: ')))}")
         venter=input("Trykk ENTER for å fortsette!") 
     elif ans=="3":
         clear()
         print("\nHer bergnes arealet av en trekant")
+
+        print(f"Areal: {rektangel(int(input('Oppgi g: ')), int(input('Oppgi h: ')))}") 
         venter=input("Trykk ENTER for å fortsette!") 
     elif ans=="4":
         clear()
         print("\nHer bergnes arealet av et parallellogram")
+        print(f"Areal: {rektangel(int(input('Oppgi g: ')), int(input('Oppgi h: ')))}")
         venter=input("Trykk ENTER for å fortsette!") 
     elif ans=="5":
         clear()
