@@ -1,6 +1,7 @@
 from cgi import print_arguments
 from inspect import Parameter
 import os
+import math
 
 # Funksjon for å tømme terminalen
 def clear():
@@ -22,12 +23,15 @@ def skriv_meny():
 # Funksjon for å beregne arealet av et kvadrat skrives her. Funsjonen skal ta imot et parameter (s)
 # Funksjonen skal returnere arealet
 # Utvikler 1 har ansvaret for å lage denne funksjonen
+
 def kvadrat(s):
     return s*s
+
 
 # Funksjon for å beregne arealet av et rektangel skrives her. Funsjonen skal ta imot to parameter (g og h)
 # Funksjonen skal returnere arealet
 # Utvikler 1 har ansvaret for å lage denne funksjonen
+
 
 def rektangel(g,h):
     return g*h
@@ -43,24 +47,31 @@ def trekant(g,h):
 # Funksjonen skal returnere arealet
 # Utvikler 1 har ansvaret for å lage denne funksjonen
 
+
 def parallellogram(g,h):
     return g*h
-
 # Funksjon for å beregne arealet av en rombe skrives her. Funsjonen skal ta imot to parameter (g og h)
 # Funksjonen skal returnere arealet
 # Utvikler 2 har ansvaret for å lage denne funksjonen
 
+def rombe(g,h):
+    return g*h
 
 # Funksjon for å beregne arealet av en trapes skrives her. Funsjonen skal ta imot tre parameter (a, b og h)
 # Funksjonen skal returnere arealet
 # Utvikler 2 har ansvaret for å lage denne funksjonen
 
+def trapes(a,b,h):
+    return (a+b)*h/2
 
 # Funksjon for å beregne arealet av en sirkel skrives her. Funsjonen skal ta imot et parameter (r)
 # Funksjonen skal returnere arealet
 # Utvikler 2 har ansvaret for å lage denne funksjonen
 
-   
+def sirkel(r):
+    return math.pi*r*r
+
+    
 
 # Programmet starter her
 ans="Start"
@@ -82,6 +93,7 @@ while ans != "8":
     elif ans=="3":
         clear()
         print("\nHer bergnes arealet av en trekant")
+
         print(f"Areal: {rektangel(int(input('Oppgi g: ')), int(input('Oppgi h: ')))}") 
         venter=input("Trykk ENTER for å fortsette!") 
     elif ans=="4":
@@ -92,16 +104,19 @@ while ans != "8":
     elif ans=="5":
         clear()
         print("\nHer bergnes arealet av en rombe")
-        venter=input("Trykk ENTER for å fortsette!") 
+        print(f"Areal: {rombe(int(input('Oppgi g: ')), int(input('Oppgi h: ')))}")
+        venter=input("Trykk ENTER for å fortsette!")
     elif ans=="6":
         clear()
         print("\nHer bergnes arealet av en trapes")
+        print(f"Areal: {trapes(int(input('Oppgi a: ')), int(input('Oppgi b: ')), int(input('Oppgi h: ')))}") 
         venter=input("Trykk ENTER for å fortsette!")         
     elif ans=="7":
         clear()
         print("\nHer bergnes arealet av en sirkel")
-        venter=input("Trykk ENTER for å fortsette!") 
+        print(f"Areal: {sirkel(int(input('Oppgi radius: ')))}")
+        venter=input("Trykk ENTER for å fortsette!")  
     
-print("\nTakk for at du brukte areal-programmet! Velkommen igjen!\n")          
+        print("\nTakk for at du brukte areal-programmet! Velkommen igjen!\n")          
     
         
