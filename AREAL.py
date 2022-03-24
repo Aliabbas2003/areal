@@ -1,3 +1,4 @@
+from cgi import print_arguments
 from inspect import Parameter
 import os
 
@@ -64,7 +65,7 @@ while ans != "8":
     ans=input("Hva ønsker du å gjøre. Velg tall? ") 
     if ans=="1":
         clear()
-        kvadrat=input("hva vil det vare?")
+        kvadrat=print_arguments("hva vil det vare?")
         print("\nHer bergnes arealet av et kvadrat")
         venter=input("Trykk ENTER for å fortsette!")    
     elif ans=="2":
