@@ -64,7 +64,7 @@ while ans != "8":
     ans=input("Hva ønsker du å gjøre. Velg tall? ") 
     if ans=="1":
         clear()
-        print(kvadrat)
+        kvadrat=input("skriv inn numberen.")
         print("\nHer bergnes arealet av et kvadrat")
         venter=input("Trykk ENTER for å fortsette!")    
     elif ans=="2":
