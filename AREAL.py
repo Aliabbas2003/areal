@@ -20,7 +20,9 @@ def skriv_meny():
 # Funksjon for å beregne arealet av et kvadrat skrives her. Funsjonen skal ta imot et parameter (s)
 # Funksjonen skal returnere arealet
 # Utvikler 1 har ansvaret for å lage denne funksjonen
-
+def kvadrat(s):
+    kvadratareal=s*s
+    return(kvadratareal)
 
 # Funksjon for å beregne arealet av et rektangel skrives her. Funsjonen skal ta imot to parameter (g og h)
 # Funksjonen skal returnere arealet
@@ -61,6 +63,7 @@ while ans != "8":
     ans=input("Hva ønsker du å gjøre. Velg tall? ") 
     if ans=="1":
         clear()
+        input(f"oppgi {kvadrat}")
         print("\nHer bergnes arealet av et kvadrat")
         venter=input("Trykk ENTER for å fortsette!")    
     elif ans=="2":
