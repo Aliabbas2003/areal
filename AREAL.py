@@ -1,3 +1,4 @@
+from inspect import Parameter
 import os
 import math
 
@@ -78,6 +79,7 @@ while ans != "8":
     ans=input("Hva ønsker du å gjøre. Velg tall? ") 
     if ans=="1":
         clear()
+        kvadrat=int("hva vil det vare?")
         print("\nHer bergnes arealet av et kvadrat")
         print(f"Areal: {kvadrat(int(input('Oppgi side lengde: ')))}")
         venter=input("Trykk ENTER for å fortsette!")    
